@@ -1,0 +1,69 @@
+.centered {
+  margin: auto;
+  display: block;
+}
+
+.link {
+    stroke: #aaa;
+}
+  
+.node text {
+    stroke: #333;
+    cursor: pointer;
+}
+
+.node circle{
+  stroke: #fff;
+  stroke-width: 3px;
+}
+
+.overlay {
+  display: none;
+  width: 50%;
+  background-color: rgba(0,0,0,0.8);
+  margin-top: auto;
+  margin-bottom: auto;
+  transition: .5s ease;
+}
+
+#formOverlay{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%,0);
+  -ms-transform: translate(-50%,0);
+  padding-top:5px;
+  padding-right:15px;
+  padding-bottom:15px;
+  padding-left:15px;
+}
+
+.small-logo {
+  width: 25px;
+  height: auto;
+}
+
+h5 {
+  color: white;
+}
+
+input, label {
+  display: block;
+}
+
+.full-size {
+  width: 100%
+}
+
+.rotate {
+  animation: rotation 2s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}

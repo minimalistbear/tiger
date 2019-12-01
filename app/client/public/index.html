@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="libs/bootstrap.min.css">
+  <link rel="stylesheet" href="libs/toast.min.css">
+
+  <title>TIGER: Topology Indentifier Generating Extraordinary Results</title>
+</head>
+
+<body>
+  <script src="libs/d3.v2.min.js"></script>
+  <script src="libs/jquery.3-41.min.js"></script>
+  <script src="libs/toast.min.js"></script>
+  <script src="libs/popper.min.js"></script>
+  <script src="libs/bootstrap.min.js"></script>
+
+  <script src="js/func.js"></script>
+  <script src="js/d3_addX.js"></script>
+  <script src="js/d3_events.js"></script>
+  <script src="js/d3_graph.js"></script>
+  <script src="js/misc.js"></script>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-5 text-center" style="margin-top: auto; margin-bottom: auto;">
+          <!-- Title -->
+          <h6><b>T</b>opology <b>I</b>dentifier <b>G</b>enerating <b>E</b>xtraordinary <b>R</b>esults</h6>
+          <!-- Delete & Reload Page Button -->
+          <div class="container" id="reloadContainer" style="visibility:hidden">
+            <input class="btn btn-primary" type="button" id="reloadButton" onclick="deleteGraphAndReloadPage()" value="Delete and Reload">
+          </div>
+      </div>
+      <!-- Title Logo -->
+      <div class="col-2 text-center" style="margin-top: auto; margin-bottom: auto;">
+        <img src="images/logo.png" id="tigerLogo" class="img-fluid" alt="Tiger Logo" style="max-width: 100%">
+      </div>
+      <div class="col-5" style="margin-top: auto; margin-bottom: auto;">
+        <div class="container" id="instructionsContainer" style="visibility:hidden">
+          <!-- Buttons in Upper Right-Hand Corner: Add Node/Link + Add/Show Flows -->
+          <div class="text-center">
+            <input class="btn btn-primary" type="button" id="addNodeButton" onclick="addNode()" value="Add Node">
+            <input class="btn btn-primary" type="button" id="addLinkButton" onclick="addLink()" value="Add Link">
+            <div class="btn-group" id="addFlowButton">
+              <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                Add/Show Flows
+              </button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" style="cursor: pointer" onclick="addFlow()">Add Flow</a>
+                <a class="dropdown-item" style="cursor: pointer" onclick="showFlows()">Show Flows</a>
+              </div>
+            </div>
+            <!-- Instructions -->
+            <div class="text-secondary">left-click any node for further information</div>
+            <div class="text-secondary">right-click any node to edit node</div>
+            <div class="text-secondary">left-click any link for further information</div>
+            <div class="text-secondary">right-click any link to edit link</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Start Detection Button -->
+  <div class="form-row text-center" id="startButtonRow">
+      <div class="col-12">
+        <input class="btn btn-primary" type="button" id="startButton" onclick="startDetection()" value="Start Topology Detection">    
+      </div>
+  </div>
+
+  <!-- div for D3 Graph -->
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="graph"></div>
+      </div>
+      <!-- <div class="col-4 info"></div> -->
+    </div>
+  </div>
+
+  <!-- div for Add/Edit Overlays -->
+  <div class="overlay" id="formOverlay">
+    <div id="formOverlay"></div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+{
+  "name": "topology-detection-app",
+  "version": "0.0.1",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "PORT=80 BEST_IP=192.168.2.42 TIGER_BOX=true node app.js",
+    "local": "node app.js",
+    "watch": "nodemon .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^1.19.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.16.4"
+  }
+}
